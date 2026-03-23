@@ -1,23 +1,18 @@
-import java.util.LinkedList;
+import java.util.LinkedHashSet;
 
 public class TrainConsistApp {
 
     public static void main(String[] args) {
 
-        LinkedList<String> consist = new LinkedList<>();
+        LinkedHashSet<String> bogies = new LinkedHashSet<>();
 
-        consist.add("Engine");
-        consist.add("Sleeper");
-        consist.add("AC");
-        consist.add("Cargo");
-        consist.add("Guard");
+        bogies.add("Engine");
+        bogies.add("Sleeper");
+        bogies.add("Cargo");
+        bogies.add("Guard");
+        bogies.add("Sleeper");
 
-        consist.add(2, "Pantry Car");
-
-        consist.removeFirst();
-        consist.removeLast();
-
-        System.out.println("Final Train Consist:");
-        System.out.println(consist);
+        System.out.println("Train Formation:");
+        System.out.println(bogies);
     }
 }
