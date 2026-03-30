@@ -16,6 +16,7 @@ public class TrainConsistApp {
 
     public static void main(String[] args) {
 
+
         List<Bogie> bogies = new ArrayList<>();
         bogies.add(new Bogie(1, 50, "Passenger"));
         bogies.add(new Bogie(2, 70, "Passenger"));
