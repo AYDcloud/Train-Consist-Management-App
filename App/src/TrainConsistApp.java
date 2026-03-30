@@ -21,21 +21,18 @@ public class TrainConsistApp {
 
     public static void main(String[] args) {
 
-        // Goods bogies list
         List<Bogie> bogies = new ArrayList<>();
         bogies.add(new Bogie(1, "Cylindrical", "Petroleum"));
         bogies.add(new Bogie(2, "Box", "Coal"));
         bogies.add(new Bogie(3, "Cylindrical", "Petroleum"));
         bogies.add(new Bogie(4, "Flatbed", "Steel"));
 
-        // 🔹 UC12: Safety compliance check
         boolean isSafe = bogies.stream()
                 .allMatch(b ->
                         !b.type.equals("Cylindrical") ||
                                 b.cargo.equals("Petroleum")
                 );
 
-        // Display result
         if (isSafe) {
             System.out.println("Train is SAFETY COMPLIANT ✅");
         } else {
