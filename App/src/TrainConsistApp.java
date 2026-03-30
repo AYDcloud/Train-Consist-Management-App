@@ -46,7 +46,6 @@ public class TrainConsistApp {
             System.out.println("Error: " + e.getMessage());
         }
 
-        // Display valid bogies only
         System.out.println("\nFinal Bogie List:");
         bogies.forEach(System.out::println);
     }
