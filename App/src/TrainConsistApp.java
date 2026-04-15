@@ -1,19 +1,17 @@
 import java.util.*;
 
-// 🔹 Custom Exception
 class InvalidCapacityException extends Exception {
     public InvalidCapacityException(String message) {
         super(message);
     }
 }
 
-// 🔹 Bogie Class
 class Bogie {
     int id;
     int capacity;
     String type;
 
-    // Constructor with validation
+
     public Bogie(int id, int capacity, String type) throws InvalidCapacityException {
         if (capacity <= 0) {
             throw new InvalidCapacityException("Capacity must be greater than 0!");
@@ -36,10 +34,10 @@ public class TrainConsistApp {
         List<Bogie> bogies = new ArrayList<>();
 
         try {
-            // ✅ Valid bogie
+           
             bogies.add(new Bogie(1, 60, "Passenger"));
 
-            // ❌ Invalid bogie (will throw exception)
+         
             bogies.add(new Bogie(2, 0, "Passenger"));
 
         } catch (InvalidCapacityException e) {
